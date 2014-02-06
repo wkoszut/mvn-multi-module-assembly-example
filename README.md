@@ -16,7 +16,7 @@ Create distribution directory:
 * web - web interface, depends on api and db
 
 To build project run command:
-'''
+```
 mvn package
 ...
 [INFO] Reactor Summary:
@@ -34,16 +34,15 @@ mvn package
 [INFO] Finished at: Thu Feb 06 15:48:25 CET 2014
 [INFO] Final Memory: 8M/81M
 [INFO] ------------------------------------------------------------------------
-
-'''
+```
 
 after that in following directory You will find distribution
 
-'''
+```
 mvn-multi-module-assembly-example/distribution/target/distribution-1.0.0-SNAPSHOT-bin
-'''
+```
 
 run following command to run application
-'''
+```
 java -classpath classes:lib/log4j-1.2.17.jar com.synapsis.mvn.App
-'''
+```
