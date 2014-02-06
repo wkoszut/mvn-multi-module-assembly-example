@@ -5,9 +5,9 @@ A project using modules in maven with assembly plugin.
 
 ## Goal
 Create distribution directory:
-+bin
-+-classes - contains all unpacked classes and resources that are necessary to run application
-+-lib - contains all third party libraries
+* +bin
+* +-classes - contains all unpacked classes and resources that are necessary to run application
+* +-lib - contains all third party libraries
 
 ## Modules
 * api - public API
