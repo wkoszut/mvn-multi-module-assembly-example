@@ -10,23 +10,27 @@ package com.synapsis.mvn.domain;
  */
 public class User {
 
-    private Long id;
+    private Long mId;
 
-    private String name;
+    private String mName;
 
-    public Long getId() {
-        return id;
+    public User(final Long id, final String test) {
+        //To change body of created methods use File | Settings | File Templates.
     }
 
-    public void setId(final Long id) {
-        this.id = id;
+    public Long getmId() {
+        return mId;
     }
 
-    public String getName() {
-        return name;
+    public void setmId(final Long mId) {
+        this.mId = mId;
     }
 
-    public void setName(final String name) {
-        this.name = name;
+    public String getmName() {
+        return mName;
+    }
+
+    public void setmName(final String mName) {
+        this.mName = mName;
     }
 }
