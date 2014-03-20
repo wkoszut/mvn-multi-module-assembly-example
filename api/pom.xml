@@ -4,11 +4,11 @@
     <parent>
         <artifactId>mvn-multi-module</artifactId>
         <groupId>com.synapsis.mvn</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
