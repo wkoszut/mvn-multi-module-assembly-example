@@ -95,6 +95,14 @@
         <module name="web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api" target="1.7" />
+      <module name="db" target="1.7" />
+      <module name="distribution" target="1.7" />
+      <module name="MultiModuleArchive" target="1.7" />
+      <module name="standalone" target="1.7" />
+      <module name="web" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -105,7 +113,6 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/db" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/distribution" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/standalone" charset="UTF-8" />

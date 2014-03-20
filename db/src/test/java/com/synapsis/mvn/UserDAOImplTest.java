@@ -1,6 +1,5 @@
 package com.synapsis.mvn;
 
-
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.BeforeClass;
@@ -16,10 +15,8 @@ import org.junit.Test;
  */
 public class UserDAOImplTest {
 
-
     @Test
     public void testApp() {
         assertNotNull(new UserDAOImpl().getUser());
     }
-
 }

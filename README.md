@@ -1,7 +1,7 @@
 mvn-multi-module-assembly-example
 =================================
 
-A project using modules in maven with assembly plugin.
+A project using modules in maven with assembly plugin and release plugin.
 
 ## Goal
 Create distribution directory:
