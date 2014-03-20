@@ -21,7 +21,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: com.synapsis.mvn:db:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.synapsis.mvn:db:1.0.1-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.9" level="project" />
     <orderEntry type="module" module-name="api" />
   </component>
