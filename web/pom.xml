@@ -3,12 +3,12 @@
     <parent>
         <artifactId>mvn-multi-module</artifactId>
         <groupId>com.synapsis.mvn</groupId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>web</artifactId>
     <packaging>war</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>web</name>
     <url>http://maven.apache.org</url>
 
@@ -16,13 +16,13 @@
         <dependency>
             <groupId>com.synapsis.mvn</groupId>
             <artifactId>db</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.synapsis.mvn</groupId>
             <artifactId>api</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

@@ -3,28 +3,39 @@
   <component name="ArtifactManager">
     <artifact type="war" name="web:war">
       <output-path>$PROJECT_DIR$/web/target</output-path>
+      <properties id="maven-jee-properties">
+        <options>
+          <module>web</module>
+          <packaging>war</packaging>
+        </options>
+      </properties>
       <root id="archive" name="web-1.0.1-SNAPSHOT.war">
         <element id="artifact" artifact-name="web:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="web:war exploded">
       <output-path>$PROJECT_DIR$/web/target/web-1.0.1-SNAPSHOT</output-path>
+      <properties id="maven-jee-properties">
+        <options>
+          <exploded>true</exploded>
+          <module>web</module>
+          <packaging>war</packaging>
+        </options>
+      </properties>
       <root id="root">
-        <element id="javaee-facet-resources" facet="web/web/Web" />
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
             <element id="module-output" name="web" />
           </element>
           <element id="directory" name="lib">
-            <element id="archive" name="db-1.0.1-SNAPSHOT.jar">
-              <element id="module-output" name="db" />
-            </element>
-            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.9" />
-            <element id="archive" name="api-1.0.1-SNAPSHOT.jar">
-              <element id="module-output" name="api" />
-            </element>
+            <element id="library" level="project" name="Maven: com.synapsis.mvn:db:1.0.1-SNAPSHOT" />
+            <element id="library" level="project" name="Maven: com.synapsis.mvn:api:1.0.1-SNAPSHOT" />
           </element>
         </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/web/target/web-1.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="web/web/Web" />
       </root>
     </artifact>
   </component>
@@ -62,7 +73,6 @@
     <option name="diffsInCommentsNonSignificant" value="false" />
   </component>
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions>
       <entry name=".+\.(properties|xml|html|dtd|tld)" />
       <entry name=".+\.(gif|png|jpeg|jpg)" />
@@ -80,19 +90,15 @@
       <entry name="?*.ftl" />
     </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
-        <processorPath useClasspath="true" />
-      </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="api" />
         <module name="db" />
+        <module name="api" />
+        <module name="web" />
         <module name="distribution" />
         <module name="standalone" />
-        <module name="web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -104,18 +110,18 @@
       <module name="web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
-  <component name="CopyrightManager" default="">
-    <module2copyright />
-  </component>
+  <component name="CopyrightManager" default="" />
   <component name="DependencyValidationManager">
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+  <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/db" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/distribution" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/standalone" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/standalone/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/standalone/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web" charset="UTF-8" />
   </component>
   <component name="EntryPointsManager">
@@ -124,12 +130,14 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/web" />
   </component>
-  <component name="GradleSettings">
-    <option name="gradleHome" value="$USER_HOME$/Avantis/mpservices/_libs/gradle-1.6" />
-    <option name="linkedProjectPath" value="$PROJECT_DIR$/../Avantis/hibernate-orm/build.gradle" />
-    <option name="preferLocalInstallationToWrapper" value="true" />
-  </component>
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="IdProvider" IDEtalkID="2BB7BCB3AAB63B22661470B3DF3AB233" />
+  <component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+      <option name="myName" value="Project Default" />
+    </profile>
+    <version value="1.0" />
+  </component>
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" />
     <option name="OPTION_SCOPE" value="protected" />
@@ -318,7 +326,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="Sun1.7" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ResourceManagerContainer">
@@ -413,15 +421,28 @@
     <property name="useTabs" value="false" />
   </component>
   <component name="libraryTable">
+    <library name="Maven: com.synapsis.mvn:api:1.0.1-SNAPSHOT">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/api/1.0.1-SNAPSHOT/api-1.0.1-SNAPSHOT.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/api/1.0.1-SNAPSHOT/api-1.0.1-SNAPSHOT-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/api/1.0.1-SNAPSHOT/api-1.0.1-SNAPSHOT-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.synapsis.mvn:db:1.0.1-SNAPSHOT">
       <CLASSES>
-        <root url="jar://$PROJECT_DIR$/db/pom.xml!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT.jar!/" />
       </CLASSES>
       <JAVADOC>
         <root url="jar://$PROJECT_DIR$/db/db-1.0.1-SNAPSHOT-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
         <root url="jar://$PROJECT_DIR$/db/db-1.0.1-SNAPSHOT-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: junit:junit:4.10">
@@ -446,17 +467,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: mysql:mysql-connector-java:5.1.9">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.hamcrest:hamcrest-core:1.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar!/" />
@@ -470,4 +480,3 @@
     </library>
   </component>
 </project>
-

@@ -5,7 +5,7 @@
     <groupId>com.synapsis.mvn</groupId>
     <artifactId>mvn-multi-module</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <modules>
         <module>api</module>
         <module>web</module>
