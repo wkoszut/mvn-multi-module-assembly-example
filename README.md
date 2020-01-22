@@ -39,10 +39,10 @@ mvn package
 after that in following directory You will find distribution
 
 ```
-mvn-multi-module-assembly-example/distribution/target/distribution-1.0.0-SNAPSHOT-bin
+mvn-multi-module-assembly-example/distribution/target/distribution-1.0.2-SNAPSHOT-bin
 ```
 
 run following command to run application
 ```
-java -classpath classes:lib/log4j-1.2.17.jar com.synapsis.mvn.App
+java -classpath com.synapsis.mvn.App
 ```
