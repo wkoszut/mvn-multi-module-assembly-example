@@ -9,12 +9,12 @@
           <packaging>war</packaging>
         </options>
       </properties>
-      <root id="archive" name="web-1.0.1-SNAPSHOT.war">
+      <root id="archive" name="web-1.0.2-SNAPSHOT.war">
         <element id="artifact" artifact-name="web:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="web:war exploded">
-      <output-path>$PROJECT_DIR$/web/target/web-1.0.1-SNAPSHOT</output-path>
+      <output-path>$PROJECT_DIR$/web/target/web-1.0.2-SNAPSHOT</output-path>
       <properties id="maven-jee-properties">
         <options>
           <exploded>true</exploded>
@@ -28,12 +28,17 @@
             <element id="module-output" name="web" />
           </element>
           <element id="directory" name="lib">
-            <element id="library" level="project" name="Maven: com.synapsis.mvn:db:1.0.1-SNAPSHOT" />
-            <element id="library" level="project" name="Maven: com.synapsis.mvn:api:1.0.1-SNAPSHOT" />
+            <element id="archive" name="db-1.0.2-SNAPSHOT.jar">
+              <element id="module-output" name="db" />
+            </element>
+            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.9" />
+            <element id="archive" name="api-1.0.2-SNAPSHOT.jar">
+              <element id="module-output" name="api" />
+            </element>
           </element>
         </element>
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/web/target/web-1.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/target/web-1.0.2-SNAPSHOT/META-INF/MANIFEST.MF" />
         </element>
         <element id="javaee-facet-resources" facet="web/web/Web" />
       </root>
@@ -123,9 +128,6 @@
     <file url="file://$PROJECT_DIR$/standalone/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/standalone/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web" charset="UTF-8" />
-  </component>
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/web" />
@@ -421,17 +423,6 @@
     <property name="useTabs" value="false" />
   </component>
   <component name="libraryTable">
-    <library name="Maven: com.synapsis.mvn:api:1.0.1-SNAPSHOT">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/api/1.0.1-SNAPSHOT/api-1.0.1-SNAPSHOT.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/api/1.0.1-SNAPSHOT/api-1.0.1-SNAPSHOT-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/api/1.0.1-SNAPSHOT/api-1.0.1-SNAPSHOT-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: com.synapsis.mvn:db:1.0.1-SNAPSHOT">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT.jar!/" />
@@ -445,6 +436,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.synapsis.mvn:db:1.0.2-SNAPSHOT">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.2-SNAPSHOT/db-1.0.2-SNAPSHOT.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.2-SNAPSHOT/db-1.0.2-SNAPSHOT-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.2-SNAPSHOT/db-1.0.2-SNAPSHOT-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: junit:junit:4.10">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/" />
@@ -456,15 +458,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: log4j:log4j:1.2.17">
+    <library name="Maven: mysql:mysql-connector-java:5.1.9">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.hamcrest:hamcrest-core:1.1">
