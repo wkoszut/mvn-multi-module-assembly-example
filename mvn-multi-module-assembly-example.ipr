@@ -31,7 +31,8 @@
             <element id="archive" name="db-1.0.2-SNAPSHOT.jar">
               <element id="module-output" name="db" />
             </element>
-            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.9" />
+            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.21" />
+            <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
             <element id="archive" name="api-1.0.2-SNAPSHOT.jar">
               <element id="module-output" name="api" />
             </element>
@@ -99,11 +100,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="db" />
-        <module name="api" />
-        <module name="web" />
-        <module name="distribution" />
         <module name="standalone" />
+        <module name="api" />
+        <module name="distribution" />
+        <module name="web" />
+        <module name="db" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -331,6 +332,23 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+  </component>
   <component name="ResourceManagerContainer">
     <option name="myResourceBundles">
       <value>
@@ -423,6 +441,17 @@
     <property name="useTabs" value="false" />
   </component>
   <component name="libraryTable">
+    <library name="Maven: com.google.protobuf:protobuf-java:3.11.4">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.synapsis.mvn:db:1.0.1-SNAPSHOT">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT.jar!/" />
@@ -458,15 +487,15 @@
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: mysql:mysql-connector-java:5.1.9">
+    <library name="Maven: mysql:mysql-connector-java:8.0.21">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.hamcrest:hamcrest-core:1.1">
