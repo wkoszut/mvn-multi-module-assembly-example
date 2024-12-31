@@ -14,7 +14,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>
+                <version>3.7.1</version>
                 <executions>
                     <execution>
                         <id>create-binary</id>
@@ -28,6 +28,29 @@
                             <descriptors>
                                 <descriptor>src/assemble/assemble.xml</descriptor>
                             </descriptors>
+                            <moduleSets>
+                                <moduleSet>
+                                    <useAllReactorProjects>true</useAllReactorProjects>
+                                    <includes>
+                                        <include>*:db</include>
+                                        <include>*:standalone</include>
+                                    </includes>
+                                    <binaries>
+                                        <outputDirectory>classes</outputDirectory>
+                                        <unpack>true</unpack>
+                                        <dependencySets>
+                                            <dependencySet>
+                                                <includes>
+                                                    <include>*:standalone</include>
+                                                </includes>
+                                                <scope>compile</scope>
+                                                <outputDirectory>lib</outputDirectory>
+                                                <unpack>false</unpack>
+                                            </dependencySet>
+                                        </dependencySets>
+                                    </binaries>
+                                </moduleSet>
+                            </moduleSets>
                         </configuration>
                     </execution>
                 </executions>
