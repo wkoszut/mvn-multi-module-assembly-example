@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ArtifactManager">
-    <artifact type="war" name="web:war">
+    <artifact type="war" external-system-id="Maven" name="web:war">
       <output-path>$PROJECT_DIR$/web/target</output-path>
       <properties id="maven-jee-properties">
         <options>
@@ -13,7 +13,7 @@
         <element id="artifact" artifact-name="web:war exploded" />
       </root>
     </artifact>
-    <artifact type="exploded-war" name="web:war exploded">
+    <artifact type="exploded-war" external-system-id="Maven" name="web:war exploded">
       <output-path>$PROJECT_DIR$/web/target/web-1.0.2-SNAPSHOT</output-path>
       <properties id="maven-jee-properties">
         <options>
@@ -31,8 +31,8 @@
             <element id="archive" name="db-1.0.2-SNAPSHOT.jar">
               <element id="module-output" name="db" />
             </element>
-            <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.21" />
-            <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
+            <element id="library" level="project" name="Maven: com.mysql:mysql-connector-j:9.1.0" />
+            <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:4.26.1" />
             <element id="archive" name="api-1.0.2-SNAPSHOT.jar">
               <element id="module-output" name="api" />
             </element>
@@ -112,6 +112,7 @@
       <module name="db" target="1.7" />
       <module name="distribution" target="1.7" />
       <module name="MultiModuleArchive" target="1.7" />
+      <module name="mvn-multi-module" target="1.7" />
       <module name="standalone" target="1.7" />
       <module name="web" target="1.7" />
     </bytecodeTargetLevel>
@@ -130,6 +131,7 @@
     <file url="file://$PROJECT_DIR$/standalone/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web" charset="UTF-8" />
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/web" />
   </component>
@@ -165,11 +167,6 @@
         <option value="$PROJECT_DIR$/web/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/db/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ModuleEditorState">
@@ -318,10 +315,10 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MultiModuleArchive.iml" filepath="$PROJECT_DIR$/MultiModuleArchive.iml" />
       <module fileurl="file://$PROJECT_DIR$/api/api.iml" filepath="$PROJECT_DIR$/api/api.iml" />
       <module fileurl="file://$PROJECT_DIR$/db/db.iml" filepath="$PROJECT_DIR$/db/db.iml" />
       <module fileurl="file://$PROJECT_DIR$/distribution/distribution.iml" filepath="$PROJECT_DIR$/distribution/distribution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mvn-multi-module.iml" filepath="$PROJECT_DIR$/mvn-multi-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/standalone/standalone.iml" filepath="$PROJECT_DIR$/standalone/standalone.iml" />
       <module fileurl="file://$PROJECT_DIR$/web/web.iml" filepath="$PROJECT_DIR$/web/web.iml" />
     </modules>
@@ -329,7 +326,7 @@
   <component name="ProjectResources">
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RemoteRepositoriesConfiguration">
@@ -375,6 +372,20 @@
   <component name="XPathView.XPathProjectComponent">
     <history />
     <find-history />
+  </component>
+  <component name="accountSettings">
+    <option name="activeProfile" value="profile:default" />
+    <option name="activeRegion" value="eu-west-1" />
+    <option name="recentlyUsedProfiles">
+      <list>
+        <option value="profile:default" />
+      </list>
+    </option>
+    <option name="recentlyUsedRegions">
+      <list>
+        <option value="eu-west-1" />
+      </list>
+    </option>
   </component>
   <component name="atlassian-ide-plugin-workspace">
     <option name="bambooConfiguration">
@@ -452,6 +463,30 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: com.google.protobuf:protobuf-java:4.26.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="com.google.protobuf" artifactId="protobuf-java" version="4.26.1" baseVersion="4.26.1" />
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/4.26.1/protobuf-java-4.26.1.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/4.26.1/protobuf-java-4.26.1-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/4.26.1/protobuf-java-4.26.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.mysql:mysql-connector-j:9.1.0" type="java-imported" external-system-id="Maven">
+      <properties groupId="com.mysql" artifactId="mysql-connector-j" version="9.1.0" baseVersion="9.1.0" />
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/9.1.0/mysql-connector-j-9.1.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/9.1.0/mysql-connector-j-9.1.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/mysql/mysql-connector-j/9.1.0/mysql-connector-j-9.1.0-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: com.synapsis.mvn:db:1.0.1-SNAPSHOT">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT.jar!/" />
@@ -465,18 +500,8 @@
         <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.1-SNAPSHOT/db-1.0.1-SNAPSHOT-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: com.synapsis.mvn:db:1.0.2-SNAPSHOT">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.2-SNAPSHOT/db-1.0.2-SNAPSHOT.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.2-SNAPSHOT/db-1.0.2-SNAPSHOT-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/com/synapsis/mvn/db/1.0.2-SNAPSHOT/db-1.0.2-SNAPSHOT-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: junit:junit:4.10">
+    <library name="Maven: junit:junit:4.10" type="java-imported" external-system-id="Maven">
+      <properties groupId="junit" artifactId="junit" version="4.10" baseVersion="4.10" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10.jar!/" />
       </CLASSES>
@@ -487,18 +512,32 @@
         <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.10/junit-4.10-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: mysql:mysql-connector-java:8.0.21">
+    <library name="Maven: junit:junit:4.12" type="java-imported" external-system-id="Maven">
+      <properties groupId="junit" artifactId="junit" version="4.12" baseVersion="4.12" />
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.21/mysql-connector-java-8.0.21-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.hamcrest:hamcrest-core:1.1">
+    <library name="Maven: junit:junit:4.13.2" type="java-imported" external-system-id="Maven">
+      <properties groupId="junit" artifactId="junit" version="4.13.2" baseVersion="4.13.2" />
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.13.2/junit-4.13.2-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.hamcrest:hamcrest-core:1.1" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hamcrest" artifactId="hamcrest-core" version="1.1" baseVersion="1.1" />
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar!/" />
       </CLASSES>
@@ -507,6 +546,18 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.hamcrest:hamcrest-core:1.3" type="java-imported" external-system-id="Maven">
+      <properties groupId="org.hamcrest" artifactId="hamcrest-core" version="1.3" baseVersion="1.3" />
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3-sources.jar!/" />
       </SOURCES>
     </library>
   </component>
